@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>scalea 0.5s linear 0s normal none</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<script src="./Element.js"></script>
+<style type="text/css">
+    *{
+        margin:0px;
+        padding:0px;
+    }
+    #fun1{
+        height: 100%;
+    }
+    #fun1 .scalea{
+        position:relative;
+        display: inline-block;
+        left: 50%;
+        margin-left: -102.5px;
+        top: 30px;
+    }
+    #fun1 .scalea2{
+        position:absolute;
+        display: inline-block;
+        left: 50%;
+        margin-left: -64px;
+        top: 37px;
+        animation:scalea2 5s linear 0s infinite normal;
+    }
+     @keyframes scalea2{
+        0%{transform:rotate(60deg);}
+        20%{transform:rotate(70deg);}
+        50%{transform:rotate(40deg);}
+        60%{transform:rotate(10deg);}
+        100%{transform:rotate(60deg);}
+    }
+</style>
+<script>
+    window.onload = function(){
+       
+    }
+</script>
+</head>
+<body>
+<div id="fun1">
+    <span class="scalea">
+        <img src="./compass_c5234dc.png">
+        <span class="scalea2">
+        <img src="./compass-pointer_8b29f62.png">
+        </span>
+    </span>
+    
+</div>
+</body>
+</html>

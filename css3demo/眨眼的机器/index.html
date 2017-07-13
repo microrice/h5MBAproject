@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css">
+    *{
+        margin:0px;
+        padding:0px;
+    }
+    .box{
+        height:450px;
+        width: 490px;
+        position: relative;
+        z-index: 0;
+        margin:30px auto;
+    }
+    .shield{
+    background-image: url("./shield.68b0a74c4a48.png");
+    background-position: center 45px;
+    background-repeat: no-repeat;
+    height: 450px;
+    margin: 0 auto;
+    width: 403px;
+    z-index: 1;
+    }
+ .critter.top-left::before {
+    animation:blink 5s linear 0s infinite normal;
+    -moz-animation:blink 5s linear 0s infinite normal;
+    -webkit-animation:blink 5s linear 0s infinite normal;
+    background-image: url("./eye-lid-top-right.8fb9f328fa1f.png");
+    content: "";
+    height: 48px;
+    left: 45px;
+    opacity: 0;
+    position: absolute;
+    top: 56px;
+    width: 48px;
+}
+ .critter.top-left {
+    background-image: url("./critter-top-left.e4cd620eeb90.png");
+    height: 129px;
+    left: 0;
+    top: 50px;
+    width: 122px;
+}
+.critter {
+    background-position: left top;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+}
+
+.critter.arms {
+    background-image: url("./critter-arms.e7b8a3f378a2.png");
+    height: 155px;
+    left: 67px;
+    top: 65px;
+    width: 95px;
+    z-index: 2;
+}
+ .critter {
+    background-position: left top;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+}
+
+@keyframes blink {
+0% {
+    opacity: 0;
+}
+40% {
+    opacity: 0;
+}
+41% {
+    opacity: 1;
+}
+42% {
+    opacity: 1;
+}
+43% {
+    opacity: 0;
+}
+75% {
+    opacity: 0;
+}
+76% {
+    opacity: 1;
+}
+77% {
+    opacity: 1;
+}
+78% {
+    opacity: 0;
+}
+100% {
+    opacity: 0;
+}
+}
+@-webkit-keyframes blink {
+0% {
+    opacity: 0;
+}
+40% {
+    opacity: 0;
+}
+41% {
+    opacity: 1;
+}
+42% {
+    opacity: 1;
+}
+43% {
+    opacity: 0;
+}
+75% {
+    opacity: 0;
+}
+76% {
+    opacity: 1;
+}
+77% {
+    opacity: 1;
+}
+78% {
+    opacity: 0;
+}
+100% {
+    opacity: 0;
+}
+}
+@-moz-keyframes blink {
+0% {
+    opacity: 0;
+}
+40% {
+    opacity: 0;
+}
+41% {
+    opacity: 1;
+}
+42% {
+    opacity: 1;
+}
+43% {
+    opacity: 0;
+}
+75% {
+    opacity: 0;
+}
+76% {
+    opacity: 1;
+}
+77% {
+    opacity: 1;
+}
+78% {
+    opacity: 0;
+}
+100% {
+    opacity: 0;
+}
+}
+</style>
+</head>
+<body>
+    <div class="box">
+        <div class="shield"></div>
+        <div class="critter top-left"></div>
+        <div class="critter arms"></div>
+    </div>
+
+</body>
+</html>
