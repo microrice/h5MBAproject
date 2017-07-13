@@ -125,7 +125,7 @@ strong{
 }
 .second_text{
     position: absolute;
-    opacity: 1;
+    opacity: 0;
     left: 10%;
     top: 17%;
     width: 81%;

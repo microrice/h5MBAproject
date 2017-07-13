@@ -41,12 +41,17 @@
         $('.autoplay').on('afterChange', function(event, slick, currentSlide){
             console.log(currentSlide);
             if(currentSlide == 1){
-              move.timeline1.tweenTo("firstpages1")
+
+              move.timeline1.tweenTo("pages1")
               move.timeline1.seek(0,false);
-             
+
+              move.move2();//执行动画二
             }
             if(currentSlide == 0){
               move.timeline1.play();
+
+              move.timeline2.tweenTo("pages2")
+              move.timeline2.seek(0,false);
             }
         });
 
@@ -77,7 +82,7 @@
         //配置第一页动画
         move.timeline1 = new TimelineMax();
         move.move1 = function(){
-          move.timeline1.add("firstpages1")//添加状态
+          move.timeline1.add("pages1")//添加状态
           move.timeline1.to(".first_mba",0.3,{opacity:1,left:"27px"},0);
           move.timeline1.to(".first_mba2",0.3,{opacity:1,left:"21%"},.2);
           move.timeline1.to(".first_phbs",.5,{opacity:1,left:"27px"},.3);
@@ -85,6 +90,23 @@
           move.timeline1.to(".first_2018",.5,{opacity:1},.4);
         }
         
+         //配置第二页动画
+        
+        move.move2= function(){
+          move.timeline2 = new TimelineMax();
+          //css动画
+          // var $animate = $('#animate');
+          // function removeClass(){
+          //   $animate.removeClass();
+          // }
+          move.timeline2.add("pages2")//添加状态
+          move.timeline2.to(".second_bgred",0,{onComplete:function(){
+                $(".second_bgred").addClass('bounceIn' + ' animated infinite');//添加class动画
+                setTimeout(function(){$(".second_bgred").removeClass('bounceIn'+ ' animated infinite')},1000);//清理动画
+          }},0);
+          move.timeline2.to(".second_text",1,{opacity:1},.4);//清理动画
+        }
+
         move.resize = function(){
             //console.log(99)
             var oHeight = $(window).height();
