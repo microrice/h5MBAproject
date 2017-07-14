@@ -40,19 +40,20 @@
 
         $('.autoplay').on('afterChange', function(event, slick, currentSlide){
             console.log(currentSlide);
+            if(currentSlide == 0){
+              move.timeline1.play();
+              if( move.timeline2 ){
+                  move.timeline2.tweenTo("pages2")
+                  move.timeline2.seek(0,true);
+              }
+            }
             if(currentSlide == 1){
-
               move.timeline1.tweenTo("pages1")
               move.timeline1.seek(0,false);
 
               move.move2();//执行动画二
             }
-            if(currentSlide == 0){
-              move.timeline1.play();
-
-              move.timeline2.tweenTo("pages2")
-              move.timeline2.seek(0,true);
-            }
+          
         });
 
         //音乐控制器
@@ -96,11 +97,12 @@
         move.move2= function(){
           move.timeline2 = new TimelineMax();
           move.timeline2.add("pages2")//添加状态
-          move.timeline2.to("",0,{onComplete:function(){
+          move.timeline2.to(".second_bgred",.5,{opacity:1 },0);
+          move.timeline2.to("second_bgred",0,{onComplete:function(){
                 $(".second_bgred").addClass('bounceIn' + ' animated infinite');//添加class动画
                 setTimeout(function(){$(".second_bgred").removeClass('bounceIn'+ ' animated infinite')},1000);//清理动画
           }},0);
-          move.timeline2.to(".second_text",1,{opacity:1},.4);//清理动画
+          move.timeline2.to(".second_text",.5,{opacity:1},.8);
         }
 
         move.resize = function(){
