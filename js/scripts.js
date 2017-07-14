@@ -51,7 +51,7 @@
               move.timeline1.play();
 
               move.timeline2.tweenTo("pages2")
-              move.timeline2.seek(0,false);
+              move.timeline2.seek(0,true);
             }
         });
 
@@ -80,8 +80,9 @@
         };
 
         //配置第一页动画
-        move.timeline1 = new TimelineMax();
+        
         move.move1 = function(){
+          move.timeline1 = new TimelineMax();
           move.timeline1.add("pages1")//添加状态
           move.timeline1.to(".first_mba",0.3,{opacity:1,left:"27px"},0);
           move.timeline1.to(".first_mba2",0.3,{opacity:1,left:"21%"},.2);
@@ -94,13 +95,8 @@
         
         move.move2= function(){
           move.timeline2 = new TimelineMax();
-          //css动画
-          // var $animate = $('#animate');
-          // function removeClass(){
-          //   $animate.removeClass();
-          // }
           move.timeline2.add("pages2")//添加状态
-          move.timeline2.to(".second_bgred",0,{onComplete:function(){
+          move.timeline2.to("",0,{onComplete:function(){
                 $(".second_bgred").addClass('bounceIn' + ' animated infinite');//添加class动画
                 setTimeout(function(){$(".second_bgred").removeClass('bounceIn'+ ' animated infinite')},1000);//清理动画
           }},0);
