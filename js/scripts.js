@@ -19,9 +19,11 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: false,
-            autoplaySpeed: 2000
+            autoplaySpeed: 2000,
+            arrows: false //false隐藏左右按钮
         });
-
+       
+       //增加切换页面方法 $('.autoplay').slick('slickGoTo',"1");
         // swipe
         $('.autoplay').on('swipe', function(event, slick, direction){
           console.log(direction);
