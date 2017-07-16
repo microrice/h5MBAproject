@@ -124,7 +124,7 @@
           move.timeline2.to(".second_bgred",.5,{opacity:1 },0);
           move.timeline2.to("second_bgred",0,{onComplete:function(){
                 $(".second_bgred").addClass('bounceIn' + ' animated infinite');//添加class动画
-                setTimeout(function(){$(".second_bgred").removeClass('bounceIn'+ ' animated infinite')},1000);//清理动画
+                setTimeout(function(){$(".second_bgred").removeClass('bounceIn'+ ' animated infinite')},900);//清理动画
           }},0);
           move.timeline2.to(".second_text",.5,{opacity:1},.8);
         }
@@ -137,9 +137,9 @@
             if(oWidth>=414){
                 oWidth = 414;
              }
-            $(".content").css({"height":oHeight-40});
-            $(".slick-list").css({"height":oHeight-40});
-            $(".first").parent().css({"height":oHeight-40});
+            $(".content").css({"height":oHeight-41.6});
+            $(".slick-list").css({"height":oHeight-41.6});
+            $(".first").parent().css({"height":oHeight-41.6});
             $(".first_bg").css({"width":oWidth,"height":oHeight*.72,"top":oHeight-oHeight*.72});
         };
     
