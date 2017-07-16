@@ -320,8 +320,8 @@ strong{
 }
 .third_text1_bg{
     position: absolute;
-    width: 15rem;
-    height: 17rem;
+    width: 73%;
+    height: 47px;
     left: 27%;
     top: 18%;
     background: #ff4f42;
@@ -335,9 +335,9 @@ strong{
 }
 .third_text2_bg{
     position: absolute;
-    width: 15rem;
-    height: 5rem;
-    left: 26%;
+    width: 74%;
+    height: 15%;
+    left: 27%;
     top: 70%;
     background: #ff4f42;
 }
@@ -580,15 +580,15 @@ strong{
 .seventh_title{
     position: absolute;
     opacity: 1;
-    left: 8%;
-    top: 11%;
-    width: 30%;
+    left:5%;
+    top: 5%;
+    width: 29%;
 }
 .seven_text1{
     position: absolute;
     opacity: 1;
-    left: 9%;
-    top: 22%;
+    left: 6%;
+    top: 14%;
     width: 30%;
 }
 .seven_text2{
@@ -601,16 +601,16 @@ strong{
 .seven_text3{
     position: absolute;
     opacity: 1;
-    left: 9%;
-    top: 27%;
-    width: 70%;
+    left: 6%;
+    top: 21%;
+    width: 77%;
 }
 .seven_text4{
     position: absolute;
     opacity: 1;
-    left: 9%;
-    top: 31%;
-    width: 42%;
+    left: 6%;
+    top: 29%;
+    width: 45%;
 }
 .seventh_number{
     position: absolute;
@@ -622,9 +622,9 @@ strong{
 .seven_png{
     position: absolute;
     opacity: 1;
-    left: 9%;
+    left: 6%;
     top: 56%;
-    width: 82%;
+    width: 88%;
 }
 /*eighth*/
 .eighth{
@@ -642,14 +642,14 @@ strong{
     position: absolute;
     opacity: 1;
     left: 5%;
-    top: 4%;
+    top: 5%;
     width: 46%;
 }
 .eighth_bg{
     position: absolute;
     opacity: 1;
     left: 5%;
-    top: 14%;
+    top: 15%;
     width: 90%;
 }
 .eighth_text1{
