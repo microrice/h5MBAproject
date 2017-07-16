@@ -3,8 +3,8 @@
 
 
         move.init = function(){
-            move.music(); //音乐控制器
             move.resize(); //设置每屏动画
+            move.music(); //音乐控制器
             move.events(); //配置事件
             move.move1();
         }
@@ -104,6 +104,20 @@
             $(window).resize( move.resize )
         };
 
+        move.resize = function(){
+            //console.log(99)
+            var oHeight = $(window).height();
+            // alert(oHeight)
+            var oWidth = $(window).width();
+            if(oWidth>=414){
+                oWidth = 414;
+             }
+            $(".content").css({"height":oHeight-41.6});
+            $(".slick-list").css({"height":oHeight-41.6});
+            $(".first").parent().css({"height":oHeight-41.6});
+            $(".first_bg").css({"width":oWidth,"height":oHeight*.72,"top":oHeight-oHeight*.72});
+        };
+
         //配置第一页动画
         
         move.move1 = function(){
@@ -129,19 +143,7 @@
           move.timeline2.to(".second_text",.5,{opacity:1},.8);
         }
 
-        move.resize = function(){
-            //console.log(99)
-            var oHeight = $(window).height();
-            // alert(oHeight)
-            var oWidth = $(window).width();
-            if(oWidth>=414){
-                oWidth = 414;
-             }
-            $(".content").css({"height":oHeight-41.6});
-            $(".slick-list").css({"height":oHeight-41.6});
-            $(".first").parent().css({"height":oHeight-41.6});
-            $(".first_bg").css({"width":oWidth,"height":oHeight*.72,"top":oHeight-oHeight*.72});
-        };
+
     
 
 
@@ -164,7 +166,7 @@
             move.close.seek(0,true);
          })
          move.close = new TimelineMax();
-         move.close.to(".slideout",.5,{right:"-9.8rem" },0);
+         move.close.to(".slideout",.5,{right:"-12.8rem" },0);
          move.close.stop()
          move.open = new TimelineMax();
          move.open.to(".slideout",.5,{right:"0rem" },0);
