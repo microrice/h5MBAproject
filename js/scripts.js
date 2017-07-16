@@ -55,7 +55,17 @@
 
               move.move2();//执行动画二
             }
-          
+            if(currentSlide == 2){
+              move.timeline2.tweenTo("pages2")
+              move.timeline2.seek(0,true);
+
+            }
+           if(currentSlide == 3){
+              move.timeline2.tweenTo("pages2")
+              move.timeline2.seek(0,true);
+
+            }
+
         });
 
         //音乐控制器
@@ -121,3 +131,26 @@
             $(".first_bg").css({"width":oWidth,"height":oHeight*.72,"top":oHeight-oHeight*.72});
         };
     
+
+
+
+
+
+       
+           /*导航*/
+
+        $("#open_co").click(function(){
+            move.open.play()
+            move.open.seek(0,true);
+         })
+         $("#mOrC").click(function(){
+            move.close.play();
+            move.close.seek(0,true);
+         })
+         move.close = new TimelineMax();
+         move.close.to(".slideout",.5,{right:"-9.8rem" },0);
+         move.close.stop()
+         move.open = new TimelineMax();
+         move.open.to(".slideout",.5,{right:"0rem" },0);
+         move.open.stop()
+
