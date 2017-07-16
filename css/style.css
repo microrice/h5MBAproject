@@ -24,8 +24,25 @@ strong{
     margin:0px auto;
     overflow-y:hidden;
     overflow-x:hidden;
+    padding-top: 40px;
 }
-
+#title_logo{
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 2.5rem;
+    background: url(../img/titlelogo.png) no-repeat;
+    -moz-background-size:100% 100%;  
+    background-size:100% 100%;  
+}
+#open_co{
+    position: relative;
+    display: block;
+    float: right;
+    height:40px;
+    width: 40px;
+}
 /*<768时*/
 @media only screen and (max-width: 767px) {
 

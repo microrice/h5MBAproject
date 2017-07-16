@@ -137,9 +137,9 @@
             if(oWidth>=414){
                 oWidth = 414;
              }
-            $(".content").css({"height":oHeight});
-            $(".slick-list").css({"height":oHeight});
-            $(".first").parent().css({"height":oHeight});
+            $(".content").css({"height":oHeight-40});
+            $(".slick-list").css({"height":oHeight-40});
+            $(".first").parent().css({"height":oHeight-40});
             $(".first_bg").css({"width":oWidth,"height":oHeight*.72,"top":oHeight-oHeight*.72});
         };
     
