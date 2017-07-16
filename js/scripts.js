@@ -61,11 +61,23 @@
 
             }
            if(currentSlide == 3){
-              move.timeline2.tweenTo("pages2")
-              move.timeline2.seek(0,true);
-
             }
-
+           if(currentSlide == 4){
+            }
+           if(currentSlide == 5){
+            }
+           if(currentSlide == 6){
+            }
+            if(currentSlide == 6){
+            }
+            if(currentSlide == 6){
+            }
+            if(currentSlide == 7){
+            }
+            if(currentSlide == 8){
+              move.timeline1.tweenTo("pages1")
+              move.timeline1.seek(0,false);
+            }
         });
 
         //音乐控制器
@@ -144,6 +156,10 @@
             move.open.seek(0,true);
          })
          $("#mOrC").click(function(){
+            move.close.play();
+            move.close.seek(0,true);
+         })
+         $(".slideout li a").bind("click",function(){
             move.close.play();
             move.close.seek(0,true);
          })
