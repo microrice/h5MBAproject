@@ -50,6 +50,9 @@ strong{
     top: 16px;
     width: 61%;
 }
+.opnone{
+    opacity: 0;
+}
 /*<768时*/
 @media only screen and (max-width: 767px) {
 
@@ -69,6 +72,7 @@ strong{
     position: absolute;
     right: 5px;
     top: 5px;
+    transition:1s;
 }
 /*目录*/
 .slideout{
@@ -99,8 +103,8 @@ strong{
     border-style: solid;
     border-color:#414343;
     width: 74%;
-    background: url(../img/point.png)  no-repeat 10px 15px;
-    background-size: 4% 18%;
+    background: url(../img/point.png)  no-repeat 10px 16px;
+    background-size: 3% 15%;
     margin: 0px 6%;
     height: 2.0rem;
     line-height: 2.1rem;
@@ -182,7 +186,7 @@ strong{
 .active .moreOrClose{
     background: rgba(0,0,0,0);
     margin-left: auto;
-    right: .7rem;
+    right: 6.7%;
 }
 .active .moreOrClose::before,.active .moreOrClose::after{
     background: #fff;
@@ -273,7 +277,7 @@ strong{
     position: absolute;
     opacity: 0;
     left: 5%;
-    top: 9%;
+    top: 11%;
     width: 91%;
 }
 .second_text{
@@ -287,8 +291,8 @@ strong{
     position: absolute;
     opacity: 1;
     left: 10%;
-    top: 12%;
-    width: 21%;
+    top: 5%;
+    width: 23%;
 }
 /*third*/
 .third{
@@ -310,16 +314,15 @@ strong{
 }
 .third_bg{
     width: 100%;
-    height: 98%;
+    height: 100%;
     background: #ff4f42;
     opacity: .7;
-    margin-top: 4%;
 }
 .third_policy{
     position: absolute;
     opacity: 1;
     left: 8%;
-    top: 5%;
+    top: 6%;
     width: 23%;
 }
 .third_text1{
@@ -332,9 +335,9 @@ strong{
 .third_text1_bg{
     position: absolute;
     width: 73%;
-    height: 47px;
+    height: 49%;
     left: 27%;
-    top: 18%;
+    top: 16%;
     background: #ff4f42;
 }
 .third_text2{
@@ -347,17 +350,17 @@ strong{
 .third_text2_bg{
     position: absolute;
     width: 74%;
-    height: 15%;
+    height: 17%;
     left: 27%;
-    top: 70%;
+    top: 68%;
     background: #ff4f42;
 }
 .third_01{
     position: absolute;
     opacity: 1;
-    left: 14%;
+    left: 13%;
     top: 18%;
-    width: 5%;
+    width: 6%;
 }
 .third_line1{
     position: absolute;
@@ -376,9 +379,9 @@ strong{
 .third_02{
     position: absolute;
     opacity: 1;
-    left: 14%;
+    left: 13%;
     top: 70%;
-    width: 5%;
+    width: 7%;
 }
 .third_line2{
     position: absolute;
@@ -414,16 +417,15 @@ strong{
 }
 .fourth_bg{
     width: 100%;
-    height: 98%;
+    height: 100%;
     background: #ff4f42;
     opacity: .7;
-    margin-top: 4%;
 }
 .fourth_apply{
     position: absolute;
     opacity: 1;
     left: 8%;
-    top: 8%;
+    top: 6%;
     width: 22%;
 }
 .fourth_apply_text{
@@ -455,8 +457,8 @@ strong{
     position: absolute;
     opacity: 1;
     left: 6%;
-    top: 7%;
-    width: 44%;
+    top: 6%;
+    width: 50%;
 }
 .fifth_text1{
     position: absolute;
@@ -469,7 +471,7 @@ strong{
     position: absolute;
     opacity: 1;
     left: 4%;
-    top: 55%;
+    top: 56%;
     width: 92%;
 }
 .fifth_bg{
@@ -477,7 +479,7 @@ strong{
     width: 90%;
     height: 39%;
     left: 5%;
-    top: 13%;
+    top: 14%;
     background: #ff4f42;
 }
 /*sixth*/
@@ -500,67 +502,66 @@ strong{
 }
 .sixth_bg{
     width: 100%;
-    height: 98%;
+    height: 100%;
     background: #ff4f42;
     opacity: .7;
-    margin-top: 4%;
 }
 .sixth_bg2{
     position: absolute;
     width: 54%;
-    height: 13rem;
+    height: 45%;
     left: 0%;
-    top: 20%;
+    top: 14%;
     background: #ff4f42;
 }
 .sixth_title{
     position: absolute;
     opacity: 1;
     left: 8%;
-    top: 10%;
+    top: 6%;
     width: 28%;
 }
 .sixth_text1{
     position: absolute;
     opacity: 1;
     left: 9%;
-    top: 25%;
-    width: 24%;
+    top: 21%;
+    width: 25%;
 }
 .sixth_text2{
     position: absolute;
     opacity: 1;
     left: 9%;
-    top: 29%;
+    top: 26%;
     width: 21%;
 }
 .sixth_text3{
     position: absolute;
     opacity: 1;
     left: 9%;
-    top: 37%;
-    width: 38%;
+    top: 35%;
+    width: 39%;
 }
 .sixth_text4{
     position: absolute;
     opacity: 1;
     left: 59%;
-    top: 25%;
-    width: 28%;
+    top: 21%;
+    width: 29%;
 }
 .sixth_text5{
     position: absolute;
     opacity: 1;
     left: 59%;
-    top: 29%;
+    top: 26%;
     width: 21%;
 }
 .sixth_text6{
     position: absolute;
     opacity: 1;
     left: 59%;
-    top: 37%;
-    width: 30%;
+    top: 35%;
+    width: 31%;
 }
 .sixth_text7{
     position: absolute;
@@ -579,9 +580,9 @@ strong{
 .sixth_text9{
     position: absolute;
     opacity: 1;
-    left: 10%;
+    left: 8%;
     top: 72%;
-    width: 80%;
+    width: 82%;
 }
 /*seventh*/
 .seventh{
@@ -591,8 +592,8 @@ strong{
 .seventh_title{
     position: absolute;
     opacity: 1;
-    left:5%;
-    top: 5%;
+    left: 5%;
+    top: 7%;
     width: 29%;
 }
 .seven_text1{
@@ -605,16 +606,16 @@ strong{
 .seven_text2{
     position: absolute;
     opacity: 1;
-    left: 62%;
-    top: 13%;
-    width: 30%;
+    left: 56%;
+    top: 11%;
+    width: 37%;
 }
 .seven_text3{
     position: absolute;
     opacity: 1;
     left: 6%;
-    top: 21%;
-    width: 77%;
+    top: 25%;
+    width: 79%;
 }
 .seven_text4{
     position: absolute;
@@ -626,9 +627,9 @@ strong{
 .seventh_number{
     position: absolute;
     opacity: 1;
-    left: 56%;
+    left: 57%;
     top: 31%;
-    width: 35%;
+    width: 36%;
 }
 .seven_png{
     position: absolute;
@@ -653,35 +654,35 @@ strong{
     position: absolute;
     opacity: 1;
     left: 5%;
-    top: 5%;
-    width: 46%;
+    top: 8%;
+    width: 51%;
 }
 .eighth_bg{
     position: absolute;
     opacity: 1;
     left: 5%;
-    top: 15%;
+    top: 18%;
     width: 90%;
 }
 .eighth_text1{
     position: absolute;
     opacity: 1;
     left: 5%;
-    top: 47%;
+    top: 51%;
     width: 40%;
 }
 .eighth_text2{
     position: absolute;
     opacity: 1;
     left: 5%;
-    top: 54%;
+    top: 56%;
     width: 53%;
 }
 .eighth_text3{
     position: absolute;
     opacity: 1;
     left: 63%;
-    top: 53%;
+    top: 54%;
     width: 31%;
 }
 /*ninth*/
@@ -691,18 +692,17 @@ strong{
 }
 .ninth_bg{
     width: 100%;
-    height: 98%;
+    height: 100%;
     background: url(../img/ninthPage/ninth_bg.png) no-repeat;
     background-size: 334% 100%;
     background-position: 0% center;
-    margin-top: 4%;
 }
 .ninth_title{
     position: absolute;
     opacity: 1;
     left: 10%;
-    top: 13%;
-    width: 22%;
+    top: 9%;
+    width: 23%;
 }
 .ninth_Qrcode{
     position: absolute;

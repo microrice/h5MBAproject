@@ -43,6 +43,8 @@
         $('.autoplay').on('afterChange', function(event, slick, currentSlide){
             console.log(currentSlide);
             if(currentSlide == 0){
+              $("#music").removeClass("opnone")
+
               move.timeline1.play();
               if( move.timeline2 ){
                   move.timeline2.tweenTo("pages2")
@@ -50,6 +52,8 @@
               }
             }
             if(currentSlide == 1){
+              $("#music").addClass("opnone")
+
               move.timeline1.tweenTo("pages1")
               move.timeline1.seek(0,false);
 
@@ -58,7 +62,7 @@
             if(currentSlide == 2){
               move.timeline2.tweenTo("pages2")
               move.timeline2.seek(0,true);
-
+              
             }
            if(currentSlide == 3){
             }
@@ -75,6 +79,8 @@
             if(currentSlide == 7){
             }
             if(currentSlide == 8){
+              $("#music").addClass("opnone")
+
               move.timeline1.tweenTo("pages1")
               move.timeline1.seek(0,false);
             }
@@ -135,7 +141,7 @@
         move.move2= function(){
           move.timeline2 = new TimelineMax();
           move.timeline2.add("pages2")//添加状态
-          move.timeline2.to(".second_bgred",.5,{opacity:1 },0);
+          move.timeline2.to(".second_bgred",.5,{opacity:1 },0);                                      
           move.timeline2.to("second_bgred",0,{onComplete:function(){
                 $(".second_bgred").addClass('bounceIn' + ' animated infinite');//添加class动画
                 setTimeout(function(){$(".second_bgred").removeClass('bounceIn'+ ' animated infinite')},900);//清理动画
