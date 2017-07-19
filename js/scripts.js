@@ -20,7 +20,8 @@
             slidesToScroll: 1,
             autoplay: false,
             autoplaySpeed: 2000,
-            arrows: false //false隐藏左右按钮
+            arrows: false,//false隐藏左右按钮
+            lazyLoad:'progressive'//延迟加载，可选 ondemand 和 progressive
         });
        
        //增加切换页面方法 $('.autoplay').slick('slickGoTo',"1");
