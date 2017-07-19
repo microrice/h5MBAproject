@@ -7,7 +7,7 @@
             move.music(); //音乐控制器
             move.events(); //配置事件
             move.move1();
-        }
+        };
 
         $(document).ready(function() { move.init() });
 
@@ -20,8 +20,7 @@
             slidesToScroll: 1,
             autoplay: false,
             autoplaySpeed: 2000,
-            arrows: false,//false隐藏左右按钮
-            lazyLoad:'progressive'//延迟加载，可选 ondemand 和 progressive
+            arrows: false //false隐藏左右按钮
         });
        
        //增加切换页面方法 $('.autoplay').slick('slickGoTo',"1");
@@ -44,47 +43,103 @@
         $('.autoplay').on('afterChange', function(event, slick, currentSlide){
             console.log(currentSlide);
             if(currentSlide == 0){
-              $("#music").removeClass("opnone")
+              $("#music").removeClass("opnone");
 
               move.timeline1.play();
               if( move.timeline2 ){
-                  move.timeline2.tweenTo("pages2")
+                  move.timeline2.tweenTo("pages2");
                   move.timeline2.seek(0,true);
-              }
-            }
+              };
+              if(move.timeline9){
+                  move.timeline9.tweenTo("pages9");
+                  move.timeline9.seek(0,true);
+              };
+            };
             if(currentSlide == 1){
-              $("#music").addClass("opnone")
+              $("#music").addClass("opnone");
 
-              move.timeline1.tweenTo("pages1")
+              move.timeline1.tweenTo("pages1");
               move.timeline1.seek(0,false);
 
               move.move2();//执行动画二
-            }
-            if(currentSlide == 2){
-              move.timeline2.tweenTo("pages2")
-              move.timeline2.seek(0,true);
+
+              if(move.timeline3){
+                move.timeline3.tweenTo("pages3");
+                move.timeline3.seek(0,true);
+              };
               
-            }
+            };
+            if(currentSlide == 2){
+              if( move.timeline2 ){
+                  move.timeline2.tweenTo("pages2");
+                  move.timeline2.seek(0,true);
+              };
+              
+              move.move3();//执行动画三
+            
+            };
            if(currentSlide == 3){
-            }
+             if(move.timeline3){
+                move.timeline3.tweenTo("pages3");
+                move.timeline3.seek(0,true);
+              };
+            move.move4();
+            if(move.timeline5){
+              move.timeline5.tweenTo("pages5");
+              move.timeline5.seek(0,true);
+            };
+           };
            if(currentSlide == 4){
-            }
+            move.move5();
+                if(move.timeline6){
+                  move.timeline6.tweenTo("pages6");
+                  move.timeline6.seek(0,true);
+                };
+            };
            if(currentSlide == 5){
-            }
+             if(move.timeline5){
+                move.timeline5.tweenTo("pages5");
+                move.timeline5.seek(0,true);
+              };
+            move.move6();
+                if(move.timeline7){
+                  move.timeline7.tweenTo("pages7");
+                  move.timeline7.seek(0,true);
+                };
+            };
            if(currentSlide == 6){
-            }
-            if(currentSlide == 6){
-            }
-            if(currentSlide == 6){
+               if(move.timeline6){
+                  move.timeline6.tweenTo("pages6");
+                  move.timeline6.seek(0,true);
+                };
+            move.move7();
+            if(move.timeline8){
+                  move.timeline8.tweenTo("pages8");
+                  move.timeline8.seek(0,true);
+             };
             }
             if(currentSlide == 7){
-            }
+              if(move.timeline7){
+                  move.timeline7.tweenTo("pages7");
+                  move.timeline7.seek(0,true);
+                };
+                move.move8();
+                if(move.timeline9){
+                  move.timeline9.tweenTo("pages9");
+                  move.timeline9.seek(0,true);
+                };
+            };
             if(currentSlide == 8){
-              $("#music").addClass("opnone")
+              $("#music").addClass("opnone");
+              if(move.timeline8){
+                  move.timeline8.tweenTo("pages8");
+                  move.timeline8.seek(0,true);
+              };
+              move.move9();
 
-              move.timeline1.tweenTo("pages1")
+              move.timeline1.tweenTo("pages1");
               move.timeline1.seek(0,false);
-            }
+            };
         });
 
         //音乐控制器
@@ -135,7 +190,7 @@
           move.timeline1.to(".first_phbs",.5,{opacity:1,left:"27px"},.3);
           move.timeline1.to(".first_book",.5,{opacity:1,left:"63%"},.4);
           move.timeline1.to(".first_2018",.5,{opacity:1},.4);
-        }
+        };
         
          //配置第二页动画
         
@@ -148,34 +203,129 @@
                 setTimeout(function(){$(".second_bgred").removeClass('bounceIn'+ ' animated infinite')},900);//清理动画
           }},0);
           move.timeline2.to(".second_text",.5,{opacity:1},.8);
-        }
+        };
+
+       //配置第三页动画
+        
+        move.move3= function(){
+          move.timeline3 = new TimelineMax();
+          move.timeline3.add("pages3")//添加状态
+          move.timeline3.to(".third_squire1",.5,{opacity:1,left:"11%"},0);                 
+          move.timeline3.to(".third_01",.5,{opacity:1,left:"13%"},.3);                    
+          move.timeline3.to(".third_line1",.5,{opacity:1,left:"14%"},.3);   
+          move.timeline3.to(".third_text1_bg",.6,{opacity:1,left:"27%"},.5); 
+          move.timeline3.to(".third_text1",.6,{opacity:1,left:"33%"},.6);   
+
+          move.timeline3.to(".third_02",.5,{opacity:1,left:"13%"},.8);                    
+          move.timeline3.to(".third_line2",.5,{opacity:1,left:"14%"},.9);   
+          move.timeline3.to(".third_text2_bg",.6,{opacity:1,left:"27%"},1.1); 
+          move.timeline3.to(".third_squire2",.5,{opacity:1,left:"11%"},1.1);   
+          move.timeline3.to(".third_text2",.6,{opacity:1,left:"33%"},1.1); 
+
+        };
+
+        //配置第四页动画
+        
+        move.move4= function(){
+          move.timeline4 = new TimelineMax();
+          move.timeline4.add("pages4")//添加状态
+          move.timeline4.to(".fourth_apply_text",0,{onComplete:function(){
+                $(".fourth_apply_text").addClass('flipInX' + ' animated infinite');//添加class动画
+                setTimeout(function(){$(".fourth_apply_text").removeClass('flipInX'+ ' animated infinite')},900);//清理动画
+          }},0);
 
 
-    
+        };
 
+        //配置第五页动画
+        
+        move.move5= function(){
+          move.timeline5 = new TimelineMax();
+          move.timeline5.add("pages5")//添加状态
+          move.timeline5.to(".fifth_bg",0,{onComplete:function(){
+                $(".fifth_bg").addClass('bounceIn' + ' animated infinite');//添加class动画
+                setTimeout(function(){$(".fifth_bg").removeClass('bounceIn'+ ' animated infinite')},900);//清理动画
+          }},0);
+          move.timeline5.to(".fifth_text2",0,{onComplete:function(){
+                $(".fifth_text2").addClass('bounceIn' + ' animated infinite');//添加class动画
+                setTimeout(function(){$(".fifth_text2").removeClass('bounceIn'+ ' animated infinite')},900);//清理动画
+          }},.6);
+          move.timeline5.to(".fifth_text1",.5,{opacity:1},.7); 
 
+        };
+        //配置第六页动画
+        
+        move.move6= function(){
+          move.timeline6 = new TimelineMax();
+          move.timeline6.add("pages6")//添加状态
+          move.timeline6.to(".sixth_bg2",.5,{opacity:1,left:"0%"},0); 
+          move.timeline6.to(".sixth_text1",.5,{opacity:1,left:"9%"},.2); 
+          move.timeline6.to(".sixth_text2",.5,{opacity:1,left:"9%"},.4); 
+          move.timeline6.to(".sixth_text3",.5,{opacity:1,left:"9%"},.6); 
+          move.timeline6.to(".sixth_text4",.5,{opacity:1,left:"59%"},.8); 
+          move.timeline6.to(".sixth_text5",.5,{opacity:1,left:"59%"},1); 
+          move.timeline6.to(".sixth_text6",.5,{opacity:1,left:"59%"},1.2); 
+        };
 
+       //配置第七页动画
+        
+        move.move7= function(){
+          move.timeline7 = new TimelineMax();
+          move.timeline7.add("pages7")//添加状态
+          move.timeline7.to(".seven_text1",.5,{opacity:1,left:"55%"},0); 
+          move.timeline7.to(".seven_text2",.5,{opacity:1,left:"7%"},.2); 
+          move.timeline7.to(".seven_text3",.5,{opacity:1,left:"6%"},.4); 
+          move.timeline7.to(".seven_text4",.5,{opacity:1,left:"6%"},.6); 
+          move.timeline7.to(".seventh_number",.5,{opacity:1},.7);
+          move.timeline7.to(".seven_png",1,{opacity:1},.8); 
+        };
 
+       //配置第八页动画
+        
+        move.move8= function(){
+          move.timeline8 = new TimelineMax();
+          move.timeline8.add("pages8")//添加状态
+          move.timeline8.to(".eighth_bg",.8,{opacity:1},0); 
+          move.timeline8.to(".eighth_text1",.5,{opacity:1,left:"5%"},.2); 
+          move.timeline8.to(".eighth_text2",.5,{opacity:1,left:"5%"},.3); 
+          move.timeline8.to(".eighth_text3",.8,{opacity:1,left:"63%"},.4); 
+        };
+       //配置第九页动画
+        
+        move.move9= function(){
+          move.timeline9 = new TimelineMax();
+          move.timeline9.add("pages9")//添加状态
+          move.timeline9.to(".ninth_Qrcode",0,{onComplete:function(){
+                $(".ninth_Qrcode").addClass('scalea');//添加class动画
+                setTimeout(function(){$(".ninth_Qrcode").removeClass('scalea')},1000);//清理动画
+          }},0);
+          move.timeline9.to(".ninth_Qrcode",.8,{opacity:1},0);
+
+          move.timeline9.to(".ninth_Qrcode",.2,{onComplete:function(){
+                $(".ninth_Qrcode").addClass('shake');//添加class动画
+                setTimeout(function(){$(".ninth_Qrcode").removeClass('shake')},1000);//清理动画
+          }},.3)
+        };
 
        
            /*导航*/
 
         $("#open_co").click(function(){
-            move.open.play()
+            move.open.play();
             move.open.seek(0,true);
-         })
+         });
          $("#mOrC").click(function(){
             move.close.play();
             move.close.seek(0,true);
-         })
+         });
          $(".slideout li a").bind("click",function(){
             move.close.play();
             move.close.seek(0,true);
-         })
+         });
          move.close = new TimelineMax();
          move.close.to(".slideout",.5,{right:"-12.8rem" },0);
-         move.close.stop()
+         move.close.stop();
          move.open = new TimelineMax();
          move.open.to(".slideout",.5,{right:"0rem" },0);
-         move.open.stop()
+         move.open.stop();
 
