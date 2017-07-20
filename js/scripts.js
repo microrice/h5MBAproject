@@ -20,7 +20,8 @@
             slidesToScroll: 1,
             autoplay: false,
             autoplaySpeed: 2000,
-            arrows: false //false隐藏左右按钮
+            arrows: false, //false隐藏左右按钮
+            lazyLoad:"ondemand" //ondemand  progressive
         });
        
        //增加切换页面方法 $('.autoplay').slick('slickGoTo',"1");
@@ -174,9 +175,9 @@
             if(oWidth>=414){
                 oWidth = 414;
              }
-            $(".content").css({"height":oHeight-41.6});
-            $(".slick-list").css({"height":oHeight-41.6});
-            $(".first").parent().css({"height":oHeight-41.6});
+            $(".content").css({"height":oHeight});
+            $(".slick-list").css({"height":oHeight});
+            $(".first").parent().css({"height":oHeight});
             $(".first_bg").css({"width":oWidth,"height":oHeight*.72,"top":oHeight-oHeight*.72});
         };
 
@@ -265,6 +266,9 @@
           move.timeline6.to(".sixth_text4",.5,{opacity:1,left:"59%"},.8); 
           move.timeline6.to(".sixth_text5",.5,{opacity:1,left:"59%"},1); 
           move.timeline6.to(".sixth_text6",.5,{opacity:1,left:"59%"},1.2); 
+          move.timeline6.to(".sixth_text7",.5,{opacity:1,left:"31%"},1.4); 
+          move.timeline6.to(".sixth_text8",.5,{opacity:1,left:"24%"},1.6); 
+          move.timeline6.to(".sixth_text9",.5,{opacity:1,left:"8%"},1.8); 
         };
 
        //配置第七页动画
@@ -308,12 +312,14 @@
         };
 
        
-           /*导航*/
+           /*导航展开收缩*/
 
-        $("#open_co").click(function(){
+
+          $(".open_co").bind("click",function(){
             move.open.play();
             move.open.seek(0,true);
-         });
+           });
+
          $("#mOrC").click(function(){
             move.close.play();
             move.close.seek(0,true);

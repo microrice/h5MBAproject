@@ -24,7 +24,7 @@ strong{
     margin:0px auto;
     overflow-y:hidden;
     overflow-x:hidden;
-    padding-top: 41.6px;
+/*    padding-top: 41.6px;*/
 }
 #title_logo{
     z-index: 1;
@@ -36,7 +36,7 @@ strong{
     -moz-background-size:100% 100%;  
     background-size:100% 100%;  
 }
-#open_co{
+.open_co{
     position: relative;
     display: block;
     float: right;
@@ -47,11 +47,11 @@ strong{
     position: absolute;
     opacity: 1;
     left: 6%;
-    top: 16px;
-    width: 61%;
+    top: 15px;
+    width: 59%;
 }
 .opnone{
-    opacity: 0;
+    display:none;
 }
 /*<768时*/
 @media only screen and (max-width: 767px) {
@@ -276,21 +276,21 @@ strong{
     position: absolute;
     opacity: 0;
     left: 5%;
-    top: 11%;
+    top: 14%;
     width: 91%;
 }
 .second_text{
     position: absolute;
     opacity: 0;
     left: 10%;
-    top: 17%;
+    top: 20%;
     width: 81%;
 }
 .second_textint{
     position: absolute;
     opacity: 1;
     left: 9%;
-    top: 5.6%;
+    top: 8.6%;
     width: 23%;
 }
 /*third*/
@@ -321,30 +321,30 @@ strong{
     position: absolute;
     opacity: 1;
     left: 8%;
-    top: 6%;
+    top: 9%;
     width: 23%;
 }
 .third_text1{
     position: absolute;
     opacity: 0;
     left: 36%;
-    top: 21%;
+    top:24%;
     width: 61%;
 }
 .third_text1_bg{
     position: absolute;
     opacity: 0;
     width: 73%;
-    height: 49%;
+    height: 51%;
     left: 33%;
-    top: 16%;
+    top: 19%;
     background: #ff4f42;
 }
 .third_text2{
     position: absolute;
     opacity: 0;
     left: 36%;
-    top: 73%;
+    top: 78%;
     width: 59%;
 }
 .third_text2_bg{
@@ -353,49 +353,49 @@ strong{
     width: 74%;
     height: 17%;
     left: 32%;
-    top: 68%;
+    top: 73%;
     background: #ff4f42;
 }
 .third_01{
     position: absolute;
     opacity:0;
     left: 18%;
-    top: 18%;
+    top: 21%;
     width: 6%;
 }
 .third_line1{
     position: absolute;
     opacity: 0;
     left: 18%;
-    top: 19%;
+    top: 22%;
     width: 86%;
 }
 .third_squire1{
     position: absolute;
     opacity: 0;
     left: 17%;
-    top: 16%;
+    top: 19%;
     width: 11%;
 }
 .third_02{
     position: absolute;
     opacity: 0;
     left: 17%;
-    top: 70%;
+    top: 75%;
     width: 7%;
 }
 .third_line2{
     position: absolute;
     opacity: 0;
     left: 18%;
-    top: 71%;
+    top: 76%;
     width: 86%;
 }
 .third_squire2{
     position: absolute;
     opacity: 0;
     left: 16%;
-    top: 68%;
+    top: 73%;
     width: 11%;
 }
 /*fourth*/
@@ -426,14 +426,14 @@ strong{
     position: absolute;
     opacity: 1;
     left: 8%;
-    top: 6.2%;
+    top: 9.2%;
     width: 22%;
 }
 .fourth_apply_text{
     position: absolute;
     opacity: 1;
     left: 8%;
-    top: 15%;
+    top: 18%;
     width: 85%;
 }
 /*fifth*/
@@ -458,21 +458,21 @@ strong{
     position: absolute;
     opacity: 1;
     left: 6%;
-    top: 6%;
+    top: 9%;
     width: 50%;
 }
 .fifth_text1{
     position: absolute;
     opacity: 0;
     left: 8%;
-    top: 17%;
+    top: 20%;
     width: 82%;
 }
 .fifth_text2{
     position: absolute;
     opacity: 1;
     left: 4%;
-    top: 56%;
+    top: 59%;
     width: 92%;
 }
 .fifth_bg{
@@ -480,7 +480,7 @@ strong{
     width: 90%;
     height: 39%;
     left: 5%;
-    top: 14%;
+    top: 17%;
     background: #ff4f42;
 }
 /*sixth*/
@@ -513,77 +513,77 @@ strong{
     width: 54%;
     height: 45%;
     left: -5%;
-    top: 14%;
+    top: 17%;
     background: #ff4f42;
 }
 .sixth_title{
     position: absolute;
     opacity: 1;
     left: 8%;
-    top: 6%;
+    top: 9%;
     width: 28%;
 }
 .sixth_text1{
     position: absolute;
     opacity: 0;
     left: 1%;
-    top: 21%;
+    top: 24%;
     width: 25%;
 }
 .sixth_text2{
     position: absolute;
     opacity: 0;
     left: 1%;
-    top: 26%;
+    top: 29%;
     width: 21%;
 }
 .sixth_text3{
     position: absolute;
     opacity: 0;
     left: 1%;
-    top: 35%;
+    top: 38%;
     width: 39%;
 }
 .sixth_text4{
     position: absolute;
     opacity: 0;
     left: 50%;
-    top: 21%;
+    top: 24%;
     width: 29%;
 }
 .sixth_text5{
     position: absolute;
     opacity: 0;
     left: 50%;
-    top: 26%;
+    top: 29%;
     width: 21%;
 }
 .sixth_text6{
     position: absolute;
     opacity: 0;
     left: 50%;
-    top: 35%;
+    top: 38%;
     width: 31%;
 }
 .sixth_text7{
     position: absolute;
-    opacity: 1;
-    left: 31%;
-    top: 65%;
+    opacity: 0;
+    left: 25%;
+    top: 68%;
     width: 35%;
 }
 .sixth_text8{
     position: absolute;
-    opacity: 1;
-    left: 24%;
-    top: 64%;
+    opacity: 0;
+    left: 15%;
+    top: 67%;
     width: 53%;
 }
 .sixth_text9{
     position: absolute;
-    opacity: 1;
-    left: 8%;
-    top: 72%;
+    opacity: 0;
+    left: -3%;
+    top: 75%;
     width: 82%;
 }
 /*seventh*/
@@ -595,49 +595,49 @@ strong{
     position: absolute;
     opacity: 1;
     left: 6%;
-    top: 6.4%;
+    top: 9.4%;
     width: 29%;
 }
 .seven_text1{
     position: absolute;
     opacity: 0;
     left: 7%;
-    top: 14%;
+    top: 17%;
     width: 38%;
 }
 .seven_text2{
     position: absolute;
     opacity: 0;
     left: 40%;
-    top: 12%;
+    top: 15%;
     width: 37%;
 }
 .seven_text3{
     position: absolute;
     opacity: 0;
     left: 2%;
-    top: 25%;
+    top: 28%;
     width: 79%;
 }
 .seven_text4{
     position: absolute;
     opacity: 0;
     left: 1%;
-    top: 29%;
+    top: 32%;
     width: 45%;
 }
 .seventh_number{
     position: absolute;
     opacity: 0;
     left: 57%;
-    top: 31%;
+    top: 34%;
     width: 36%;
 }
 .seven_png{
     position: absolute;
     opacity: 0;
     left: 6%;
-    top: 56%;
+    top: 59%;
     width: 88%;
 }
 /*eighth*/
@@ -649,42 +649,42 @@ strong{
     position: absolute;
     opacity: 1;
     left: 7%;
-    top: 10%;
+    top: 13%;
     width: 46%;
 }
 .eighth_title{
     position: absolute;
     opacity: 1;
     left: 5%;
-    top:  6.8%;
+    top:  9.8%;
     width: 51%;
 }
 .eighth_bg{
     position: absolute;
     opacity: 0;
     left: 5%;
-    top: 18%;
+    top: 21%;
     width: 90%;
 }
 .eighth_text1{
     position: absolute;
     opacity: 0;
     left: 1%;
-    top: 51%;
+    top: 54%;
     width: 40%;
 }
 .eighth_text2{
     position: absolute;
     opacity: 0;
     left: -2%;
-    top: 56%;
+    top: 59%;
     width: 53%;
 }
 .eighth_text3{
     position: absolute;
     opacity: 0;
     left: 55%;
-    top: 54%;
+    top: 57%;
     width: 31%;
 }
 /*ninth*/
@@ -703,21 +703,21 @@ strong{
     position: absolute;
     opacity: 1;
     left: 10%;
-    top: 7%;
+    top: 10%;
     width: 24%;
 }
 .ninth_Qrcode{
     position: absolute;
     opacity: 0;
     left: 30%;
-    top: 24%;
+    top: 27%;
     width: 41%;
 }
 .ninth_text{
     position: absolute;
     opacity: 1;
     left: 15%;
-    top: 56%;
+    top: 59%;
     width: 70%;
 }
    .scalea{
