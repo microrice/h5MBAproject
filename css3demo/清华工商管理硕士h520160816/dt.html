@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+   <!--  <meta http-equiv="X-UA-Compatible" content="chrome=1"> -->
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>带检索功能的信息窗体</title>
+    
+</head>
+<body>
+<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <style type="text/css">
+        .info-title {
+            color: white;
+            font-size: 14px;
+            background-color:blue;
+            line-height: 26px;
+            padding: 0px 0 0 6px;
+            font-weight: lighter;
+            letter-spacing: 1px
+        }
+        .info-content {
+            font: 12px Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial;
+            padding: 4px;
+            color: #666666;
+            line-height: 23px;
+        }
+        .info-content img {
+            float: left;
+            margin: 3px;
+        }
+    </style>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=57a7a49cc8bdbef276a30d2c491a5e3a&plugin=AMap.AdvancedInfoWindow"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+<div id="container"></div>
+
+<script type="text/javascript">
+    var lnglat = [116.332248,40.000043];
+    var map = new AMap.Map('container', {
+        resizeEnable: true,
+        center: lnglat,
+        zoom: 15
+    });
+    var marker = new AMap.Marker({
+        position: lnglat
+    });
+    marker.setMap(map);
+
+    var content=/*'<div class="info-title">高德地图</div>*/'<div class="info-content">' +
+            '清华大学经济管理学院</div>';
+    var  infowindow1 = new AMap.AdvancedInfoWindow({
+        content: content,
+        asOrigin: false,
+        placeSearch: false,
+        offset: new AMap.Pixel(0, -30)
+    });
+    infowindow1.open(map,lnglat);
+</script>
+</body>
+</html>
